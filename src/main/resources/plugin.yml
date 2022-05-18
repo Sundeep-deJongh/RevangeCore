@@ -3,3 +3,5 @@ version: '${project.version}'
 main: nl.revangemt.revangecore.RevangeCore
 authors: [ TheBathDuck, Sundeep_ ]
 description: Provides game functionality for RevangeMT.
+commands:
+  serverrestart: {}

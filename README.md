@@ -1,2 +1,2 @@
 # RevangeCore
-RevangeCore plugin (Made by Duck026 and McDonald's)
+RevangeCore plugin (Made by TheBathDuck and McDonald's)

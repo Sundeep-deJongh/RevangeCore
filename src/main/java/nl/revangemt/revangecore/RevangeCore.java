@@ -17,5 +17,6 @@ public final class RevangeCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        ModuleLoader.disable();
     }
 }

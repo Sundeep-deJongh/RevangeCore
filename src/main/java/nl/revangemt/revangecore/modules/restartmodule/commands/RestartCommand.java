@@ -35,7 +35,7 @@ public class RestartCommand implements CommandExecutor {
                 return false;
             }
             BossBar bar = Bukkit.createBossBar(Utils.color("&c&lRevange&f&lMT &8┃ &fDe server restart in &c10 &fseconden."), BarColor.RED, BarStyle.SOLID);
-            BukkitTask task = new RestartTask(60, bar).runTaskTimer(RevangeCore.getInstance(), 0L, 20L);
+            BukkitTask task = new RestartTask(600, bar).runTaskTimer(RevangeCore.getInstance(), 0L, 20L);
             player.sendMessage(Utils.color("&cJe hebt de serverrestart timer gestart."));
             RestartModule.setRestartBar(bar);
             RestartModule.setRestartTask(task);

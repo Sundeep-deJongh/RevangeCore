@@ -17,4 +17,8 @@ public class ModuleLoader {
         playerModule = new PlayerModule(plugin);
         restartModule = new RestartModule(plugin);
     }
+
+    public static void disable() {
+        restartModule.unload();
+    }
 }

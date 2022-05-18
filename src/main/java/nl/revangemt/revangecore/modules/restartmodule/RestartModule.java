@@ -18,5 +18,11 @@ public class RestartModule {
         plugin.getCommand("serverrestart").setExecutor(new RestartCommand());
     }
 
+    public void unload() {
+        if(restartBar != null) {
+            restartBar.removeAll();
+        }
+    }
+
 
 }

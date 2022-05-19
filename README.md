@@ -1,5 +1,5 @@
 # RevangeCore
-RevangeCore plugin (Made by TheBathDuck, Sundeep_, Ren232 and MeneerEzra)
+RevangeCore plugin (Made by TheBathDuck, Sundeep_, RazerStorm, Ren232 and MeneerEzra)
 
 |  Module | Author  |
 | ------------ | ------------ |
@@ -7,3 +7,4 @@ RevangeCore plugin (Made by TheBathDuck, Sundeep_, Ren232 and MeneerEzra)
 | Taakstraf  | MeneerEzra  |
 | Medic  | RazerStorm  |
 | Fun  | RazerStorm  |
+| Taxi  | RazerStorm  |

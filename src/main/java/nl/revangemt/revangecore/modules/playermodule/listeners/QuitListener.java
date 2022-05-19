@@ -11,8 +11,5 @@ public class QuitListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
         Player player = event.getPlayer();
-        if(!Utils.isVanished(event.getPlayer())) {
-            event.setQuitMessage(Utils.color("&7[&c-&7] " + event.getPlayer().getName()));
-        }
     }
 }

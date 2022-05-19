@@ -11,11 +11,4 @@ public class Utils {
         return ChatColor.translateAlternateColorCodes('&', msg);
     }
 
-    public static boolean isVanished(Player player) {
-        for(MetadataValue meta : player.getMetadata("vanished")) {
-            if(meta.asBoolean()) return  true;
-        }
-        return false;
-    }
-
 }

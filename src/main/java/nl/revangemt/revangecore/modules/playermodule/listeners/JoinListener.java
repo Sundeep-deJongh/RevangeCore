@@ -12,10 +12,6 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        if(!Utils.isVanished(event.getPlayer())) {
-            event.setJoinMessage(Utils.color("&7[&a+&7] " + event.getPlayer().getName()));
-        }
-
         if(RestartModule.getRestartBar() != null) {
             RestartModule.getRestartBar().addPlayer(player);
         }

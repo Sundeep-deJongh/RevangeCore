@@ -66,6 +66,10 @@
             <id>CodeMC</id>
             <url>https://repo.codemc.org/repository/maven-public/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -85,6 +89,11 @@
             <groupId>io.github.bananapuncher714</groupId>
             <artifactId>nbteditor</artifactId>
             <version>7.18.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.LeonMangler</groupId>
+            <artifactId>SuperVanish</artifactId>
+            <version>6.2.6-4</version>
         </dependency>
     </dependencies>
 </project>

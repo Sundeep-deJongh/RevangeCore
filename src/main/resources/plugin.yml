@@ -1,7 +1,13 @@
 name: RevangeCore
 version: '${project.version}'
 main: nl.revangemt.revangecore.RevangeCore
-authors: [ TheBathDuck, Sundeep_ ]
+authors: [ TheBathDuck, Sundeep_, RazersStorm ]
 description: Provides game functionality for RevangeMT.
 commands:
   serverrestart: {}
+  siton:
+    description: "Zit op een speler zijn hoofd!"
+  forcesit:
+    description: "Zet een speler op een andere speler zijn hoofd!"
+  medic:
+    description: "Krijg medic spullen bro"

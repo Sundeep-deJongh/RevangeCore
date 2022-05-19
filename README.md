@@ -6,3 +6,4 @@ RevangeCore plugin (Made by TheBathDuck, Sundeep_, Ren232 and MeneerEzra)
 | Server Restart  | TheBathDuck  |
 | Taakstraf  | MeneerEzra  |
 | Medic  | RazerStorm  |
+| Fun  | RazerStorm  |

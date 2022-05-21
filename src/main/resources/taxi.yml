@@ -1,0 +1,113 @@
+NPC-Name: "&6Taxi"
+GUI-Name: "&7&lTaxi &8&l| &c&lRevange&f&lMT"
+GUI-rows: 1
+
+############################################################
+# DIT IS EEN VOORBEELD VOOR ALS JE IETS KAPOT GEMAAKT HEBT #
+############################################################
+#
+# example:
+#    price: 200
+#    locatie: "WORLD;x;y;z:PITCH;YAW"
+#    item: "COMPASS"
+#    display-name: "&3VOORBEELD"
+#    lores:
+#      - ""
+#      - "&3Prijs: 200"
+#
+##############################################################
+
+
+# NBT group & value is niet verplicht
+# Durability is niet verplicht
+
+locations:
+  grovestreet:
+    price: 0
+    locatie: "world;593;52;89;90;0"
+    item:
+      material: "WOOD_HOE"
+      display-name: "&aGrove Street"
+      nbt-group: "mtcustom"
+      nbt-value: "glocknormal"
+      lores:
+        - "&2Hier kan je huis inbraken doen!"
+
+  blokkenpark:
+    price: 200
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "STAINED_CLAY"
+      durability: 14
+      display-name: "&aBlokken Park"
+      lores:
+        - "&2De grote spawn van de server!"
+
+  blackcity:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "WOOD_HOE"
+      display-name: "&aBlack City"
+      nbt-group: "mtcustom"
+      nbt-value: "minigun"
+      lores:
+        - "&cLet op! Hier staat lootdrop aan!"
+        - "&2The east, hier zijn vooral fabrieken!"
+
+  haven:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "POTATO_ITEM"
+      display-name: "&aHaven"
+      nbt-group: "mtcustom"
+      nbt-value: "wiet_verpakt"
+      lores:
+        - "&2Hier is opium & wiet in de buurt!"
+
+  arena:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "OBSERVER"
+      display-name: "&aArena"
+      lores:
+        - "&2Hier worden events gehost!"
+
+  venicebeach:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "SAND"
+      display-name: "&aArena"
+      lores:
+        - "&2Hier is een turf war en de pier!"
+
+  constructionsite:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "PURPUR_PILLAR"
+      display-name: "&aConstruction Site"
+      lores:
+        - "&cLet op! Hier staat lootdrop aan!"
+        - "&2Hier spawnen wildcrates & wapendrops!"
+
+  politiebureau:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "IRON_HOE"
+      display-name: "&aConstruction Site"
+      lores:
+        - "&2Het politie bureau, in de buurt van lester!"
+
+  rockfordboulevard:
+    price: 0
+    locatie: "WORLD;x;y;z"
+    item:
+      material: "GHAST_TEAR"
+      display-name: "&aRockford Boulevard"
+      lores:
+        - "&2In de buurt van de juwelier & grote bank!"

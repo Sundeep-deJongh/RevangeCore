@@ -3,6 +3,8 @@ version: '${project.version}'
 main: nl.revangemt.revangecore.RevangeCore
 authors: [ TheBathDuck, Sundeep_, RazersStorm ]
 description: Provides game functionality for RevangeMT.
+softdepend:
+  - Citizens
 commands:
   serverrestart: {}
   siton:

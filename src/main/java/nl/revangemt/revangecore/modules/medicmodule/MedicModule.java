@@ -14,7 +14,7 @@ public class MedicModule {
 
     private RevangeCore plugin;
 
-    private static @Getter ArrayList<UUID> healing = new ArrayList<>();
+    private static @Getter ArrayList<UUID> cooldown = new ArrayList<>();
 
     public MedicModule(RevangeCore plugin) {
         this.plugin = plugin;

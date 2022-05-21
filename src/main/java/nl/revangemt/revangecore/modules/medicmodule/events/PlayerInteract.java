@@ -3,7 +3,7 @@ package nl.revangemt.revangecore.modules.medicmodule.events;
 import io.github.bananapuncher714.nbteditor.NBTEditor;
 import nl.revangemt.revangecore.RevangeCore;
 import nl.revangemt.revangecore.modules.medicmodule.MedicModule;
-import nl.revangemt.revangecore.modules.medicmodule.utils.ProgressBar;
+import nl.revangemt.revangecore.modules.medicmodule.tasks.ProgressBar;
 import nl.revangemt.revangecore.utils.Utils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -35,8 +35,8 @@ public class PlayerInteract implements Listener {
         String nbt = NBTEditor.getString(e.getItem(), "mtcustom");
         if(!nbt.equals("bandage_fullmodel") && !nbt.equals("medkit_fullmodel")) return;
 
-        if(MedicModule.getHealing().contains(p.getUniqueId())) {
-            p.sendMessage(Utils.color("&cJe bent al bezig!"));
+        if(MedicModule.getCooldown().contains(p.getUniqueId())) {
+            p.sendMessage(Utils.color("&cJe zit op cooldown!"));
             return;
         }
 
@@ -45,7 +45,7 @@ public class PlayerInteract implements Listener {
             return;
         }
 
-        MedicModule.getHealing().add(p.getUniqueId());
+        MedicModule.getCooldown().add(p.getUniqueId());
 
         ItemStack hand = p.getInventory().getItemInHand();
         if (hand.getAmount() != 1) {

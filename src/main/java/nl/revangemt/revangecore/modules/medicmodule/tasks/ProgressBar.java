@@ -1,4 +1,4 @@
-package nl.revangemt.revangecore.modules.medicmodule.utils;
+package nl.revangemt.revangecore.modules.medicmodule.tasks;
 
 import com.google.common.base.Strings;
 import net.md_5.bungee.api.ChatMessageType;
@@ -16,6 +16,7 @@ public class ProgressBar extends BukkitRunnable {
     private int time;
     private int seconds;
     private int secondsC;
+    private int max;
     private RevangeCore plugin;
     private Player player;
     private String type;
@@ -23,16 +24,21 @@ public class ProgressBar extends BukkitRunnable {
     public ProgressBar(RevangeCore plugin, Player player, String type) {
         this.type = type;
 
-        if(Objects.equals(type, "bandage")) {
-            this.seconds = 2 - 1;
-        }else if(Objects.equals(type, "medkit")) {
-            this.seconds = 5 - 1;
-        }
-
         this.plugin = plugin;
         this.time = 9;
         this.secondsC = 0;
         this.player = player;
+
+        if(Objects.equals(type, "bandage")) {
+            this.seconds = 2 - 1;
+            this.max = 20;
+            (new CooldownTask(player)).runTaskLaterAsynchronously(this.plugin, 5*20);
+        }else if(Objects.equals(type, "medkit")) {
+            this.seconds = 5 - 1;
+            this.max = 50;
+            (new CooldownTask(player)).runTaskLaterAsynchronously(this.plugin, 10*20);
+        }
+
     }
 
 
@@ -45,13 +51,6 @@ public class ProgressBar extends BukkitRunnable {
         }
 
         if (this.seconds != -1) {
-            int max = 0;
-            if(Objects.equals(type, "bandage")) {
-                max = 20;
-            }else if(Objects.equals(type, "medkit")) {
-                max = 50;
-            }
-
             this.player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent("§8[§r" + getProgressBar(this.secondsC, max, 10, '|', "§a", "§c") + "§8]"));
         }
 
@@ -68,7 +67,6 @@ public class ProgressBar extends BukkitRunnable {
                 this.player.setHealth(player.getMaxHealth());
             }
 
-            MedicModule.getHealing().remove(player.getUniqueId());
             this.player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 100, 10);
             player.spawnParticle(Particle.REDSTONE, player.getLocation(), 20, 0.001, 2, -2, 1);
             cancel();
